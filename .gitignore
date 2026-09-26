@@ -1,0 +1,16 @@
+# Byte-compiled / optimized files
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+
+# ONNX model weights (downloaded on demand or stored locally in models/)
+models/*.onnx
+!models/.gitkeep
+
+# Environments
+.venv/
+venv/
+
+# Output directories
+output/
