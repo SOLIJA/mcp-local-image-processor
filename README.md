@@ -120,11 +120,13 @@ The server speaks MCP over stdio (the default transport).
   "mcpServers": {
     "local-image-processor": {
       "command": "python",
-      "args": ["C:\\AI\\mcp\\image-processor\\server.py"]
+      "args": ["~/local-image-processor/server.py"]
     }
   }
 }
 ```
+
+> **Windows note**: Replace `"~/local-image-processor/server.py"` with your absolute path, e.g. `"C:\\path\\to\\local-image-processor\\server.py"`.
 
 ### Generic `mcpServers` block (python)
 
@@ -133,7 +135,7 @@ The server speaks MCP over stdio (the default transport).
   "mcpServers": {
     "local-image-processor": {
       "command": "python",
-      "args": ["C:\\AI\\mcp\\image-processor\\server.py"]
+      "args": ["~/local-image-processor/server.py"]
     }
   }
 }
@@ -149,7 +151,7 @@ The server speaks MCP over stdio (the default transport).
       "args": [
         "run",
         "--directory",
-        "C:\\AI\\mcp\\image-processor",
+        "~/local-image-processor",
         "python",
         "server.py"
       ]
@@ -161,7 +163,7 @@ The server speaks MCP over stdio (the default transport).
 ## Project layout
 
 ```
-image-processor/
+local-image-processor/
 ├── server.py            # MCPServer instance + entry point
 ├── requirements.txt
 ├── README.md
